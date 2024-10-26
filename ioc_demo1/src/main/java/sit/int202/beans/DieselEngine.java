@@ -24,4 +24,8 @@ public class DieselEngine implements Engine {
     public void turnOff() {
         System.out.println("Turn Off - Diesel Engine");
     }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
 }
