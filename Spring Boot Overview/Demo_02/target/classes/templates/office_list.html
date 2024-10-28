@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Office List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="/office_list.css" rel="stylesheet">
+ </head>
+<body>
+<div class="container">
+    <h1>Office Listing</h1>
+    <hr>
+    <div class="row fw-bold text-center">
+        <div class="col-1">Office Code</div>
+        <div class="col-2">City</div>
+        <div class="col-3">Address</div>
+        <div class="col-2">Country</div>
+        <div class="col-2">Phone#</div>
+        <div class="col-2">Actions</div>
+    </div>
+    <div class="row text-center" th:each="office : ${offices}">
+        <div class="col-1" th:text="${office.officeCode}"></div>
+        <div class="col-2">
+            <a th:href="@{'/offices?officeCode='+ ${office.officeCode}}">
+                <span th:text="${office.city}"></span>
+            </a>
+        </div>
+        <div class="col-3" th:text="${office.addressLine1}"></div>
+        <div class="col-2" th:text="${office.country}"></div>
+        <div class="col-2" th:text="${office.phone}"></div>
+        <div class="col-2">
+            <a th:href="@{'/offices/delete-office?officeCode='+ ${office.officeCode}}">
+                <button class="delete-button">X</button>
+            </a>
+            <a th:href="@{'/offices/update_form?officeCode='+ ${office.officeCode}}">
+                <button class="update-button">Update</button>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div class="button-group text-center">
+        <a href="/home">
+            <button class="styled-button">Go to Previous Page </button>
+        </a>
+        <a href="/">
+            <button class="styled-button">Go to Start Page</button>
+        </a>
+        <a href="/offices/office_form">
+            <button class="styled-button">Add New Office</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>

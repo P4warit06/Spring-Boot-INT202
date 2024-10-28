@@ -1,0 +1,165 @@
+.button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px
+}
+
+.styled-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(45deg, #4CAF50, #2E7D32);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.styled-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.styled-button:active {
+    transform: scale(0.98);
+}
+
+.h4 {
+    color: black;
+    font-size: 20px;
+    font-family: "Angsana New";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1554120013-4ba50c1a1788?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: whitesmoke;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h3 {
+    color: whitesmoke;
+    font-family: Bahnschrift;
+}
+
+.music-link {
+    color: #ffcc00; /* Highlight color for the music link */
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+}
+
+.button, .styled-button {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .styled-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.styled-button {
+    background-color: #28a745; /* Green color for this button */
+}
+
+.styled-button:hover {
+    background-color: #218838; /* Darker shade for hover */
+}
+
+.custom-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 20px 5px; /* Space above and below the list */
+}
+
+.custom-list li {
+    background-color: white; /* Light background for list items */
+    color: darkred; /* Text color */
+    padding: 10px 20px;
+    margin: 5px 0; /* Space between list items */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.custom-list li:hover {
+    background-color: wheat; /* Change background on hover */
+}
+.container {
+    color :white;
+}
+.row p4 {
+    color :whitesmoke;
+}
+h3{
+    color: red;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.button-group {
+    margin-top: 20px;
+}
+.styled-button {
+    background-color: #007bff;
+    color: white;
+}
+.styled-button:hover {
+    background-color: #0056b3;
+}
+.delete-button {
+    background-color: lightsalmon;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.update-button {
+    margin-left: 15px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}

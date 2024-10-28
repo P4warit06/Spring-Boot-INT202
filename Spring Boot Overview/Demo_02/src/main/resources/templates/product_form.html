@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Office</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #007bff;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Create New Office</h1>
+    <hr>
+    <div class="form-container">
+        <form action="/offices/update-office" method="post">
+            <div class="mb-3">
+                <label for="officeCode" class="form-label">Office Code</label>
+                <input type="text" id="officeCode" class="form-control" readonly name="officeCode" th:value="${office.officeCode}"/>
+            </div>
+            <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input type="text" id="city" class="form-control" name="city" th:value="${office.city}"/>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone#</label>
+                <input type="text" id="phone" class="form-control" name="phone" th:value="${office.phone}"/>
+            </div>
+            <div class="mb-3">
+                <label for="addressLine1" class="form-label">Address</label>
+                <input type="text" id="addressLine1" class="form-control" name="addressLine1" th:value="${office.addressLine1}"/>
+            </div>
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" id="country" class="form-control" name="country" th:value="${office.country}"/>
+            </div>
+            <div class="mb-3">
+                <label for="postalCode" class="form-label">Postal Code</label>
+                <input type="text" id="postalCode" class="form-control" name="postalCode" th:value="${office.postalCode}"/>
+            </div>
+            <div class="mb-3">
+                <label for="territory" class="form-label">Territory</label>
+                <input type="text" id="territory" class="form-control" name="territory" th:value="${office.territory}"/>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+    <hr>
+    <div class="text-center">
+        <a href="/offices/all">
+            <button class="btn btn-secondary">Back</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>
