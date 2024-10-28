@@ -19,3 +19,7 @@ Learn About Spring Boot INT202
 
 ### In view Page Or HTML FILE 
 - xmlns:th="http://www.thymeleaf.org ใส่อันนี้จั่วหัวไปก่อนเลย
+
+
+##License
+- http://jblicense.sit.kmutt.ac.th/
