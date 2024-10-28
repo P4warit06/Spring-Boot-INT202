@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Is Prime</title>
+</head>
+<body>
+<!--  <h1 th:text="'Welcome ' + ${profile.username} + '(' + ${profile.email} + ')'"></h1>-->
+  <hr>
+  <h2>Primer Checker</h2>
+  <hr>
+  <form action="/mid_exam_065_war_exploded/065/isPrime" method="post">
+    <label>Enter number to check:</label><input type="text" name="number">
+    <p th:if="${isCheckPrime != null && !isCheckPrime.isValid()}" th:text="${isCheckPrime.getResult()}"></p>
+    <input type="submit" value="submit">
+  </form>
+  <div th:if="${isCheckPrime !=null && isCheckPrime.isValid()}" >
+    <hr>
+    <p th:text="${isCheckPrime.getResult()}"></p>
+  </div>
+</body>
+</html>
