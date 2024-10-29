@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers List 059</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<h1>Customer List : by Pawarit Samriang 66130500059</h1>
+<hr>
+<table class="table">
+    <tr>
+        <th>Cust#.</th>
+        <th>CustomerName</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>CreditLimit</th>
+    </tr>
+    <tr th:each="c: ${customers}">
+        <td>
+            <a th:text="@{'059-'+${c.id}}"></a>
+        </td>
+        <td th:text="${c.customerName}"></td>
+        <td th:text="${c.city}"></td>
+        <td th:text="${c.country}"></td>
+        <td th:text="${c.creditLimit}"/></td>
+    </tr>
+</table>
+</body>
+</html>
