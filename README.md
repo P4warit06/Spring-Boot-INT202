@@ -21,5 +21,5 @@ Learn About Spring Boot INT202
 - xmlns:th="http://www.thymeleaf.org ใส่อันนี้จั่วหัวไปก่อนเลย
 
 
-##License
-- http://jblicense.sit.kmutt.ac.th/
+**License**
+> http://jblicense.sit.kmutt.ac.th/
